@@ -8,9 +8,9 @@
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.modelexplorer.popup">
          <menu
                icon="icon/logo_samares_small_icone.png"
-               id="org.eclipse.papyrus.views.modelexplorer.samares"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samares"
                label="Samares">
-          	<visibleWhen
+       		<visibleWhen
                   checkEnabled="false">
                <with
                      variable="selection">
@@ -18,7 +18,7 @@
                         ifEmpty="false"
                         operator="and">
                      <adapt
-                           type="org.eclipse.emf.ecore.EObject">
+                           type="org.eclipse.emf.ecore.EModelElement">
                         <instanceof
                               value="org.eclipse.uml2.uml.Activity">
                         </instanceof>
@@ -28,6 +28,37 @@
             </visibleWhen>
          </menu>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares">
+         <menu
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samares.simulink"
+               label="Simulink">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares.simulink">
+         <command
+               commandId="org.samares.activity2simulink.papyrus.importsimulinkmodel"
+               id="org.eclipse.papyrus.samares.importsimulinkmodel"
+               label="Import Simulink model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
    </extension>
-
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.samares.activity2simulink.papyrus.ui.handlers.ImportSimulinkModelHandler"
+            id="org.samares.activity2simulink.papyrus.importsimulinkmodel"
+            name="ImportSimulinkModel">
+      </command>
+   </extension>
 </plugin>
