@@ -32,6 +32,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares">
          <menu
+               icon="icon/logo_simulink_small_icone.png"
                id="org.eclipse.papyrus.views.modelexplorer.popup.samares.simulink"
                label="Simulink">
             <visibleWhen
@@ -44,6 +45,7 @@
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares.simulink">
          <command
                commandId="org.samares.activity2simulink.papyrus.importsimulinkmodel"
+               icon="icon/import.gif"
                id="org.eclipse.papyrus.samares.importsimulinkmodel"
                label="Import Simulink model"
                style="push">

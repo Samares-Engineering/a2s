@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.samares.activity2simulink.papyrus.features_1.0.0.201602262030.jar" id="org.samares.activity2simulink.papyrus.features" version="1.0.0.201602262030">
+   <feature url="features/org.samares.activity2simulink.papyrus.features_1.0.0.qualifier.jar" id="org.samares.activity2simulink.papyrus.features" version="1.0.0.qualifier">
       <category name="org.samares.activity2simulink.papyrus"/>
    </feature>
    <category-def name="org.samares.activity2simulink.papyrus" label="Samares-Engineering SysML Activity2Simulink"/>
