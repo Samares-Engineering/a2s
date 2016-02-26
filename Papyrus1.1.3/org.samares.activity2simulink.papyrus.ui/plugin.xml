@@ -7,7 +7,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.modelexplorer.popup">
          <menu
-               icon="icon/logo_samares_small_icone.png"
+               icon="icon/logo_samares_small_icon.png"
                id="org.eclipse.papyrus.views.modelexplorer.popup.samares"
                label="Samares">
        		<visibleWhen
@@ -32,9 +32,21 @@
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares">
          <menu
-               icon="icon/logo_simulink_small_icone.png"
+               icon="icon/logo_simulink_small_icon.png"
                id="org.eclipse.papyrus.views.modelexplorer.popup.samares.simulink"
                label="Simulink">
+            <visibleWhen
+                  checkEnabled="false">
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares">
+         <menu
+               icon="icon/logo_scilab_small_icon.png"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samares.xcos"
+               label="Xcos">
             <visibleWhen
                   checkEnabled="true">
             </visibleWhen>
