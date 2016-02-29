@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
+<!--
+    Copyright (c) 2016 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        IBM Corporation - initial API and implementation
+ -->
+
 <plugin>
    <extension
          point="org.eclipse.ui.menus">
@@ -8,7 +19,7 @@
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.modelexplorer.popup">
          <menu
                icon="icon/logo_samares_small_icon.png"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samares"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu"
                label="Samares">
        		<visibleWhen
                   checkEnabled="false">
@@ -30,10 +41,10 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu">
          <menu
                icon="icon/logo_simulink_small_icon.png"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samares.simulink"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu"
                label="Simulink">
             <visibleWhen
                   checkEnabled="false">
@@ -42,10 +53,10 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu">
          <menu
                icon="icon/logo_scilab_small_icon.png"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samares.xcos"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu"
                label="Xcos">
             <visibleWhen
                   checkEnabled="true">
@@ -54,12 +65,26 @@
       </menuContribution>
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samares.simulink">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu">
          <command
-               commandId="org.samares.activity2simulink.papyrus.importsimulinkmodel"
+               commandId="org.samares.activity2simulink.papyrus.ui.importsimulinkmodelcommand"
                icon="icon/import.gif"
-               id="org.eclipse.papyrus.samares.importsimulinkmodel"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu.importsimulinkmodelcommand"
                label="Import Simulink model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popuporg.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu">
+         <command
+               commandId="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
+               icon="icon/import.gif"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu.importxcosmodelcommand"
+               label="Import XCos model"
                style="push">
             <visibleWhen
                   checkEnabled="true">
@@ -71,8 +96,13 @@
          point="org.eclipse.ui.commands">
       <command
             defaultHandler="org.samares.activity2simulink.papyrus.ui.handlers.ImportSimulinkModelHandler"
-            id="org.samares.activity2simulink.papyrus.importsimulinkmodel"
+            id="org.samares.activity2simulink.papyrus.ui.importsimulinkmodelcommand"
             name="ImportSimulinkModel">
+      </command>
+      <command
+            defaultHandler="org.samares.activity2simulink.papyrus.ui.handlers.ImportXcosModelHandler"
+            id="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
+            name="ImportXcosModel">
       </command>
    </extension>
 </plugin>
