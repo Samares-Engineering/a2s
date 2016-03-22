@@ -96,22 +96,64 @@
             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
          <menu
                icon="icon/logo_samares_small_icon.png"
-               id="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samares"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu"
                label="Samares">
             <visibleWhen
                   checkEnabled="false">
-               <with
-                     variable="selection">
-                  <iterate
-                        ifEmpty="false"
-                        operator="and">
-                     <adapt
-                           type="org.samares.activity2simulink.papyrus.ui.Object1">
-                     </adapt>
-                  </iterate>
-               </with>
             </visibleWhen>
          </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu">
+         <menu
+               icon="icon/logo_simulink_small_icon.png"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.simulinkmenu"
+               label="Simulink">
+            <visibleWhen
+                  checkEnabled="false">
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu">
+         <menu
+               icon="icon/logo_scilab_small_icon.png"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu"
+               label="Xcos">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu">
+         <command
+               commandId="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
+               icon="icon/import.gif"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu.importxcosmodelcommand"
+               label="Import XCos model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.simulinkmenu">
+         <command
+               commandId="org.samares.activity2simulink.papyrus.ui.importsimulinkmodelcommand"
+               icon="icon/import.gif"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu.importsimulinkmodelcommand"
+               label="Import Simulink model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
       </menuContribution>
    </extension>
    <extension
@@ -126,5 +168,19 @@
             id="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
             name="ImportXcosModel">
       </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.samares.activity2simulink.papyrus.ui.wizardcategory.xcosimport"
+            name="Import simulable model">
+      </category>
+      <wizard
+            category="org.samares.activity2simulink.papyrus.ui.wizardcategory.xcosimport"
+            class="org.samares.activity2simulink.papyrus.ui.wizard.ImportXcosModelWizard"
+            icon="icon/logo_scilab_small_icon.png"
+            id="org.samares.activity2simulink.papyrus.ui.wizard.xcosimport"
+            name="Import xcos model">
+      </wizard>
    </extension>
 </plugin>
