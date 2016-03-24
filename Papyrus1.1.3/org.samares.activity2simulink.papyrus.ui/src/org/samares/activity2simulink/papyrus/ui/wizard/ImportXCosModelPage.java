@@ -50,8 +50,10 @@ public class ImportXCosModelPage extends WizardPage {
 
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				FileDialog fileDialog = new FileDialog(ImportXCosModelPage.this.container.getShell(), SWT.OPEN);         
+				FileDialog fileDialog = new FileDialog(ImportXCosModelPage.this.container.getShell(), SWT.OPEN); 
 				fileDialog.setText("Import user defined model");
+				String [] extensions = {"*.xcos"};
+				fileDialog.setFilterExtensions(extensions);
 				String path = fileDialog.open();
 				if (path != null) 
 					textXcosUserModel.setText(path);
