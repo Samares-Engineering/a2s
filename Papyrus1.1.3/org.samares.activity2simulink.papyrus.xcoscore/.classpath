@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" kind="lib" path="lib/org.scilab.modules.xcos.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.scilab.modules.javasci.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.scilab.modules.types.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>

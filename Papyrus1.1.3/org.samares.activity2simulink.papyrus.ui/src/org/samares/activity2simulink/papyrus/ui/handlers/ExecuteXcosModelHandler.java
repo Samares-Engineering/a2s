@@ -8,13 +8,11 @@ import org.samares.activity2simulink.papyrus.xcoscore.XCosCore;
 
 public class ExecuteXcosModelHandler implements IHandler {
 
-	private XCosCore xcosCore;
+
 	
 	@Override
 	public void addHandlerListener(IHandlerListener handlerListener) {
-		this.xcosCore = new XCosCore();
-		String command = "result = 3 + 2;";
-		this.xcosCore.execute(command);
+		// TODO Auto-generated method stub
 	}
 
 	@Override
@@ -24,7 +22,8 @@ public class ExecuteXcosModelHandler implements IHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		// TODO Auto-generated method stub
+		String command = "result = 3 + rand();";
+		XCosCore.getInstance().execute(command);
 		return null;
 	}
 
@@ -44,5 +43,4 @@ public class ExecuteXcosModelHandler implements IHandler {
 	public void removeHandlerListener(IHandlerListener handlerListener) {
 		// TODO Auto-generated method stub
 	}
-
 }

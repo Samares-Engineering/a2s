@@ -20,7 +20,7 @@
          <menu
                icon="icon/logo_samares_small_icon.png"
                id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu"
-               label="Samares">
+               label="Reuse model">
        		<visibleWhen
                   checkEnabled="false">
                <with
@@ -97,7 +97,7 @@
          <menu
                icon="icon/logo_samares_small_icon.png"
                id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu"
-               label="Samares">
+               label="Reuse model">
             <visibleWhen
                   checkEnabled="false">
             </visibleWhen>
