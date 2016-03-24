@@ -17,7 +17,6 @@ import org.eclipse.jface.wizard.IWizard;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.handlers.HandlerUtil;
-import org.samares.activity2simulink.papyrus.ui.wizard.MyWizard;
 
 public class ImportSimulinkModelHandler implements IHandler {
 
