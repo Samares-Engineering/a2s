@@ -7,3 +7,7 @@ Bundle-Activator: org.samares.activity2simulink.papyrus.xcoscore.Activator
 Require-Bundle: org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
+Export-Package: org.samares.activity2simulink.papyrus.xcoscore
+Bundle-ClassPath: lib/org.scilab.modules.javasci.jar,
+ lib/org.scilab.modules.types.jar,
+ .
