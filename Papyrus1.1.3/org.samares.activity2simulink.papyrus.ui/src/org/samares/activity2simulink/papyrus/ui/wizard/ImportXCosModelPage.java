@@ -10,16 +10,16 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-public class MyPageOne extends WizardPage {
+public class ImportXCosModelPage extends WizardPage {
 
 	private Text text1;
 	private Composite container;
 
-	public MyPageOne() {
+	public ImportXCosModelPage() {
 
-		super("First Page");
-		setTitle("First Page");
-		setDescription("Fake Wizard: First page");
+		super("Import Scilab/XCos function");
+		setTitle("Import Scilab/XCos function");
+		setDescription("Import existing Scilab/XCos model as an activity.");
 	}
 
 

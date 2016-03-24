@@ -1,38 +1,36 @@
 package org.samares.activity2simulink.papyrus.ui.wizard;
 
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.ui.INewWizard;
-import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 
-public class ImportXcosModelWizard extends Wizard implements INewWizard {
+public class ImportXcosModelWizard extends Wizard {
+
+	protected ImportXCosModelPage one;
 	
-	//protected MyPageOne page;
-	private WizardNewProjectCreationPage page;
-	
-	@Override
-	public void addPages() {
-	    super.addPages();
-	    page = new WizardNewProjectCreationPage("Import XCos model");
-	    page.setTitle("Select model");
-	    page.setDescription("XCos model selection from library or source file.");
-	    addPage(page);
-	} 
 	public ImportXcosModelWizard() {
-		setWindowTitle("Import XCos model");
+		super();
+		setNeedsProgressMonitor(true);
 	}
 
 	@Override
-	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		// TODO Auto-generated method stub
+	public String getWindowTitle() {
+		return "Import Scilab/XCos function";
+	}
 
+	@Override
+	public void addPages() {
+		one = new ImportXCosModelPage();
+		addPage(one);
 	}
 
 	@Override
 	public boolean performFinish() {
-		// TODO Auto-generated method stub
+		// Print the result to the console
+		System.out.println(one.getText1());
+
 		return true;
 	}
 
+	public Object getResult() {
+	      return null;  // should deliver back the in the Wizard generated data
+	}
 }

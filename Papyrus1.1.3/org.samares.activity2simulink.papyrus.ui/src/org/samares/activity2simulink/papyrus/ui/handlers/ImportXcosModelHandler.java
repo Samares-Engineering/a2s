@@ -10,26 +10,21 @@
  *******************************************************************************/
 package org.samares.activity2simulink.papyrus.ui.handlers;
 
-import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.commands.IHandlerListener;
-import org.eclipse.jface.wizard.IWizard;
 import org.eclipse.jface.wizard.WizardDialog;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.ui.handlers.HandlerUtil;
+import org.eclipse.swt.widgets.Display;
 import org.samares.activity2simulink.papyrus.ui.wizard.ImportXcosModelWizard;
-import org.samares.activity2simulink.papyrus.ui.wizard.MyWizard;
 
-public class ImportXcosModelHandler  implements IHandler {
+public class ImportXcosModelHandler implements IHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		
-		Shell activeShell = HandlerUtil.getActiveShell(event);
-		ImportXcosModelWizard wizard = new ImportXcosModelWizard();
-		WizardDialog dialog = new WizardDialog(activeShell, wizard);
+		ImportXcosModelWizard importXcosModelWizard = new ImportXcosModelWizard();
+		WizardDialog dialog = new WizardDialog(Display.getCurrent().getActiveShell(), importXcosModelWizard);
 		dialog.open();
 		return null;	
 	}
@@ -49,13 +44,13 @@ public class ImportXcosModelHandler  implements IHandler {
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isHandled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
