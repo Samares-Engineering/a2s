@@ -13,7 +13,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Text;
 
-public class ImportXCosModelPage extends WizardPage {
+public class ImportXCosModelWizardPage extends WizardPage {
 
 	private Text textXcosUserModel;
 	private Text textXcosLibraryModel;
@@ -22,7 +22,7 @@ public class ImportXCosModelPage extends WizardPage {
 	
 	private Composite container;
 
-	public ImportXCosModelPage() {
+	public ImportXCosModelWizardPage() {
 
 		super("Import Scilab/XCos function");
 		setTitle("Import Scilab/XCos function");
@@ -50,7 +50,7 @@ public class ImportXCosModelPage extends WizardPage {
 
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				FileDialog fileDialog = new FileDialog(ImportXCosModelPage.this.container.getShell(), SWT.OPEN); 
+				FileDialog fileDialog = new FileDialog(ImportXCosModelWizardPage.this.container.getShell(), SWT.OPEN); 
 				fileDialog.setText("Import user defined model");
 				String [] extensions = {"*.xcos"};
 				fileDialog.setFilterExtensions(extensions);

@@ -93,6 +93,20 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu">
+         <command
+               commandId="org.samares.activity2simulink.papyrus.ui.executexcosmodelcommand"
+               icon="icon/logo_execute_small_icon.gif"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu.executexcosmodelcommand"
+               label="Execute "
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
          <menu
                icon="icon/logo_samares_small_icon.png"

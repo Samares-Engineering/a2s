@@ -10,7 +10,14 @@
  *******************************************************************************/
 package org.samares.activity2simulink.papyrus.ui;
 
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.ui.ISelectionListener;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.uml2.uml.Activity;
 import org.osgi.framework.BundleContext;
 
 /**
@@ -28,6 +35,26 @@ public class Activator extends AbstractUIPlugin {
 	 * The constructor
 	 */
 	public Activator() {
+		IWorkbenchWindow activeWorkbenchWindow = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+		IWorkbenchPage activePage = activeWorkbenchWindow.getActivePage();
+
+		//the current selection in the entire page
+		//ISelection selection = activePage.getSelection();
+		//the current selection in the navigator view
+		//selection = activePage.getSelection();
+		//System.out.println(selection.getClass().toString());
+		
+		//add a listener
+		ISelectionListener sl = new ISelectionListener() {
+			@Override
+			public void selectionChanged(IWorkbenchPart part, ISelection sel) {
+				System.out.println("Selection is: " + sel.toString());
+				if (sel instanceof Activity) System.out.println("Activity instance: true");
+				else System.out.println("Activity instance: false");
+			}
+		};
+		
+		activePage.addSelectionListener(sl);
 	}
 
 	/*

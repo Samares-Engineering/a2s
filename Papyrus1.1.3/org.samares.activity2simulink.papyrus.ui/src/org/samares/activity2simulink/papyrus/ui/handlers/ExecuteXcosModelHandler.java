@@ -4,13 +4,21 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.commands.IHandlerListener;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.ui.IPageLayout;
+import org.eclipse.ui.ISelectionListener;
+import org.eclipse.ui.ISelectionService;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.samares.activity2simulink.papyrus.xcoscore.XCosCore;
 import org.samares.activity2simulink.papyrus.xcoscore.console.ConsoleDisplayMgr;
 
 public class ExecuteXcosModelHandler implements IHandler {
 
 
-	
+
 	@Override
 	public void addHandlerListener(IHandlerListener handlerListener) {
 		// TODO Auto-generated method stub
@@ -27,16 +35,18 @@ public class ExecuteXcosModelHandler implements IHandler {
 		//get parameters
 		//create the command to load the model into scilab
 		//create the command to launch the simulation of the model
-		String command = "result = 3 + rand();";
+
 		
+		String command = "result = 3 + rand();";
+
 		ConsoleDisplayMgr.getInstance().clear();
 		ConsoleDisplayMgr.getInstance().println("Launching Scilab with command " + command, ConsoleDisplayMgr.MSG_INFORMATION);
-		
+
 		String result = XCosCore.getInstance().execute(command);
-		
+
 		ConsoleDisplayMgr.getInstance().println("result = " + result, ConsoleDisplayMgr.MSG_INFORMATION);
 		ConsoleDisplayMgr.getInstance().println("End Scilab execution.", ConsoleDisplayMgr.MSG_INFORMATION);
-		
+
 		return null;
 	}
 

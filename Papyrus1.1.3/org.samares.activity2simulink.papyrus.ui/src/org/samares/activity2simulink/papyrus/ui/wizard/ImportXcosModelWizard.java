@@ -4,7 +4,7 @@ import org.eclipse.jface.wizard.Wizard;
 
 public class ImportXcosModelWizard extends Wizard {
 
-	protected ImportXCosModelPage one;
+	protected ImportXCosModelWizardPage one;
 	
 	public ImportXcosModelWizard() {
 		super();
@@ -18,7 +18,7 @@ public class ImportXcosModelWizard extends Wizard {
 
 	@Override
 	public void addPages() {
-		one = new ImportXCosModelPage();
+		one = new ImportXCosModelWizardPage();
 		addPage(one);
 	}
 
