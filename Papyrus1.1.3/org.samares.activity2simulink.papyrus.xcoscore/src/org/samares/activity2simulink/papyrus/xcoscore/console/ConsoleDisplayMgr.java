@@ -1,4 +1,4 @@
-package org.samares.activity2simulink.papyrus.xcoscore;
+package org.samares.activity2simulink.papyrus.xcoscore.console;
 
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.swt.SWT;
@@ -36,10 +36,25 @@ public class ConsoleDisplayMgr {
 
 	public void println(String msg, int msgKind)
 	{		
+		String msgKindString = null;
+		
 		if( msg == null ) return;
 
 		displayConsoleView();
-		getNewMessageConsoleStream(msgKind).println(msg);				
+		switch (msgKind)
+		{
+		case MSG_INFORMATION:
+			msgKindString = "Info: ";				
+			break;
+		case MSG_ERROR:
+			msgKindString = "Error: ";			
+			break;
+		case MSG_WARNING:
+			msgKindString = "Warning: ";			
+			break;
+		default:				
+		}	
+		getNewMessageConsoleStream(msgKind).println(msgKindString + msg);				
 	}
 
 	public void clear()

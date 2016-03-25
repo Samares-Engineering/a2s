@@ -11,5 +11,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.ide;bundle-version="3.11.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
-Import-Package: org.samares.activity2simulink.papyrus.xcoscore
+Import-Package: org.samares.activity2simulink.papyrus.xcoscore,
+ org.samares.activity2simulink.papyrus.xcoscore.console,
+ org.scilab.modules.types
 
