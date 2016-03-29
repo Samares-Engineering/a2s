@@ -29,7 +29,6 @@ public class XCosCoreTest {
 
 	/*@Test
 	public void testExecute_Model_Command() {
-		
 		String diagram_path = "test/org/samares/activity2simulink/papyrus/xcoscore/test/ressources/bounce.zcos";
 		String command = "importXcosDiagram(\"" + diagram_path + "\")";	
 		System.out.println(XCosCore.getInstance().execute(command));
@@ -37,7 +36,7 @@ public class XCosCoreTest {
 	
 	/*@Test
 	public void openScilabXCosTest(){
-		String diagram_path = "";
+		String diagram_path = "test/org/samares/activity2simulink/papyrus/xcoscore/test/ressources/bounce.zcos";
 		XCosCore.getInstance().openScilabXCos(diagram_path);
 	}*/
 }

@@ -31,10 +31,11 @@ public class ExecuteXcosModelHandler implements IHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
+		//get selected activity
 		//get model associated to the activity
 		//get parameters
 		//create the command to load the model into scilab
-		//create the command to launch the simulation of the model
+		//create the command to launch the simulation of the model with the parameters
 
 		
 		String command = "result = 3 + rand();";

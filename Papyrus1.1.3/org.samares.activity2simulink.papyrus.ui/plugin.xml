@@ -19,7 +19,7 @@
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.modelexplorer.popup">
          <menu
                icon="icon/logo_samares_small_icon.png"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu"
                label="Reuse model">
        		<visibleWhen
                   checkEnabled="false">
@@ -39,51 +39,51 @@
             </visibleWhen>
          </menu>
       </menuContribution>
-      <menuContribution
+     <!-- <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu">
          <menu
                icon="icon/logo_simulink_small_icon.png"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.simulinkmenu"
                label="Simulink">
             <visibleWhen
                   checkEnabled="false">
             </visibleWhen>
          </menu>
-      </menuContribution>
+      </menuContribution> -->
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu">
          <menu
                icon="icon/logo_scilab_small_icon.png"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu"
                label="Xcos">
             <visibleWhen
                   checkEnabled="true">
             </visibleWhen>
          </menu>
       </menuContribution>
-      <menuContribution
+     <!-- <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.simulinkmenu">
          <command
                commandId="org.samares.activity2simulink.papyrus.ui.importsimulinkmodelcommand"
                icon="icon/import.gif"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu.importsimulinkmodelcommand"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.simulinkmenu.importsimulinkmodelcommand"
                label="Import Simulink model"
                style="push">
             <visibleWhen
                   checkEnabled="true">
             </visibleWhen>
          </command>
-      </menuContribution>
+      </menuContribution>-->
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu">
          <command
                commandId="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
                icon="icon/import.gif"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu.importxcosmodelcommand"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu.importxcosmodelcommand"
                label="Import XCos model"
                style="push">
             <visibleWhen
@@ -93,11 +93,11 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu">
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu">
          <command
                commandId="org.samares.activity2simulink.papyrus.ui.executexcosmodelcommand"
                icon="icon/logo_execute_small_icon.gif"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.xcosmenu.executexcosmodelcommand"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu.executexcosmodelcommand"
                label="Execute "
                style="push">
             <visibleWhen
@@ -110,31 +110,31 @@
             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
          <menu
                icon="icon/logo_samares_small_icon.png"
-               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu"
                label="Reuse model">
             <visibleWhen
                   checkEnabled="false">
             </visibleWhen>
          </menu>
       </menuContribution>
-      <menuContribution
+      <!--<menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu">
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu">
          <menu
                icon="icon/logo_simulink_small_icon.png"
-               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.simulinkmenu"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.simulinkmenu"
                label="Simulink">
             <visibleWhen
                   checkEnabled="false">
             </visibleWhen>
          </menu>
-      </menuContribution>
+      </menuContribution>-->
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu">
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu">
          <menu
                icon="icon/logo_scilab_small_icon.png"
-               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu"
                label="Xcos">
             <visibleWhen
                   checkEnabled="true">
@@ -143,11 +143,11 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu">
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu">
          <command
                commandId="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
                icon="icon/import.gif"
-               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu.importxcosmodelcommand"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu.importxcosmodelcommand"
                label="Import XCos model"
                style="push">
             <visibleWhen
@@ -155,27 +155,27 @@
             </visibleWhen>
          </command>
       </menuContribution>
-      <menuContribution
+      <!--<menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.simulinkmenu">
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.simulinkmenu">
          <command
                commandId="org.samares.activity2simulink.papyrus.ui.importsimulinkmodelcommand"
                icon="icon/import.gif"
-               id="org.eclipse.papyrus.views.modelexplorer.popup.samaresmenu.simulinkmenu.importsimulinkmodelcommand"
+               id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.simulinkmenu.importsimulinkmodelcommand"
                label="Import Simulink model"
                style="push">
             <visibleWhen
                   checkEnabled="true">
             </visibleWhen>
          </command>
-      </menuContribution>
+      </menuContribution>-->
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu">
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu">
          <command
                commandId="org.samares.activity2simulink.papyrus.ui.executexcosmodelcommand"
                icon="icon/logo_execute_small_icon.gif"
-               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.samaresmenu.xcosmenu.executexcosmodelcommand"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu.executexcosmodelcommand"
                label="Execute"
                style="push">
             <visibleWhen
@@ -186,11 +186,11 @@
    </extension>
    <extension
          point="org.eclipse.ui.commands">
-      <command
+     <!-- <command
             defaultHandler="org.samares.activity2simulink.papyrus.ui.handlers.ImportSimulinkModelHandler"
             id="org.samares.activity2simulink.papyrus.ui.importsimulinkmodelcommand"
             name="ImportSimulinkModel">
-      </command>
+      </command>-->
       <command
             defaultHandler="org.samares.activity2simulink.papyrus.ui.handlers.ImportXcosModelHandler"
             id="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
