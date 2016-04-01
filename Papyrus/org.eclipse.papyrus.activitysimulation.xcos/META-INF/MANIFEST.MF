@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Xcos connector
+Bundle-SymbolicName: org.eclipse.papyrus.activitysimulation.xcos;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.eclipse.papyrus.activitysimulation.xcos.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui.console,
+ org.eclipse.jface,
+ org.eclipse.ui.workbench,
+ org.eclipse.text,
+ org.eclipse.swt,
+ org.eclipse.uml2.uml,
+ org.eclipse.core.resources,
+ org.junit,
+ org.eclipse.papyrus.moka.composites;bundle-version="1.2.0",
+ org.eclipse.debug.core;bundle-version="3.10.0",
+ org.eclipse.papyrus.moka;bundle-version="1.2.0",
+ org.eclipse.papyrus.moka.fuml;bundle-version="1.2.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/jgraphx.jar,
+ lib/org.scilab.modules.javasci.jar,
+ lib/org.scilab.modules.types.jar,
+ lib/org.scilab.modules.xcos.jar,
+ .

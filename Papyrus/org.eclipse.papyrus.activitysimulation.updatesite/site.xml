@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.samares.activity2simulink.papyrus.features_1.0.0.201603241723.jar" id="org.samares.activity2simulink.papyrus.features" version="1.0.0.201603241723">
+      <category name="org.eclipse.papyrus.activitysimulation"/>
+   </feature>
+   <category-def name="org.eclipse.papyrus.activitysimulation" label="Samares-Engineering SysML Activity continuous simulation"/>
+</site>
