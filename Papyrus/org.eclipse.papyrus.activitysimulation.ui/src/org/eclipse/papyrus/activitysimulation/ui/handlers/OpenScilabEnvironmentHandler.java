@@ -4,6 +4,7 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.commands.IHandlerListener;
 import org.eclipse.papyrus.activitysimulation.xcos.engine.XCosEngine;
+
 public class OpenScilabEnvironmentHandler implements IHandler {
 
 	@Override

@@ -6,6 +6,8 @@ import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.commands.IHandlerListener;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.papyrus.activitysimulation.xcos.console.ConsoleDisplayMgr;
+import org.eclipse.papyrus.activitysimulation.xcos.engine.XCosEngine;
 import org.eclipse.papyrus.emf.facet.custom.metamodel.v0_2_0.internal.treeproxy.impl.EObjectTreeElementImpl;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.ISelectionListener;
