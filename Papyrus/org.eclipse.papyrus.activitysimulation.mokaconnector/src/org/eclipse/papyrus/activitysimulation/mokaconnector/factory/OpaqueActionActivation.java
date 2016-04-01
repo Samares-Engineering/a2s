@@ -1,4 +1,4 @@
-package org.eclipse.papyrus.activitysimulation.mokaconnector.engine;
+package org.eclipse.papyrus.activitysimulation.mokaconnector.factory;
 
 import org.eclipse.papyrus.moka.fuml.Semantics.Actions.BasicActions.ActionActivation;
 

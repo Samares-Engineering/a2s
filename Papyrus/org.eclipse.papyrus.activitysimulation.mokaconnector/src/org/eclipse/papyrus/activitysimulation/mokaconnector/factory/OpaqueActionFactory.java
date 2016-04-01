@@ -1,4 +1,4 @@
-package org.eclipse.papyrus.activitysimulation.mokaconnector.engine;
+package org.eclipse.papyrus.activitysimulation.mokaconnector.factory;
 
 import org.eclipse.papyrus.moka.composites.Semantics.Actions.CompleteActions.CS_ReadExtentActionActivation;
 import org.eclipse.papyrus.moka.composites.Semantics.Loci.LociL3.CS_ExecutionFactory;

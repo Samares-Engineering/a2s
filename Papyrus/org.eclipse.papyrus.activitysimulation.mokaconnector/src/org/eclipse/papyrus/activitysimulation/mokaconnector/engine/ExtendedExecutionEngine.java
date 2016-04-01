@@ -1,5 +1,6 @@
 package org.eclipse.papyrus.activitysimulation.mokaconnector.engine;
 
+import org.eclipse.papyrus.activitysimulation.mokaconnector.factory.OpaqueActionFactory;
 import org.eclipse.papyrus.moka.composites.CompositeStructuresExecutionEngine;
 import org.eclipse.papyrus.moka.composites.Semantics.CommonBehaviors.Communications.CS_DispatchOperationOfInterfaceStrategy;
 import org.eclipse.papyrus.moka.composites.Semantics.CommonBehaviors.Communications.CS_NameBased_StructuralFeatureOfInterfaceAccessStrategy;
@@ -16,16 +17,6 @@ import org.eclipse.uml2.uml.OpaqueAction;
 public class ExtendedExecutionEngine extends CompositeStructuresExecutionEngine {
 
 	
-	
-	public void start(OpaqueAction opaqueAction) {
-		System.out.println("######################################################");
-		System.out.println(opaqueAction.getName());
-		System.out.println("######################################################");
-		
-	
-	}
-
-
 	@Override
 	public void start(Behavior behavior) {
 		if (behavior != null) {
