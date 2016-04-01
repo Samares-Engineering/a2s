@@ -4,6 +4,7 @@
    <extension
          point="org.eclipse.papyrus.moka.engine">
       <engine
+            class="org.eclipse.papyrus.activitysimulation.mokaconnector.engine.ExtendedExecutionEngine"
             description="Extended Execution Engine for Moka">
       </engine>
    </extension>
