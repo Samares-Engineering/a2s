@@ -31,7 +31,7 @@
                      <adapt
                            type="org.eclipse.emf.ecore.EModelElement">
                         <instanceof
-                              value="org.eclipse.uml2.uml.Activity">
+                              value="org.eclipse.uml2.uml.OpaqueAction">
                         </instanceof>
                      </adapt>
                   </iterate>
