@@ -2,17 +2,9 @@ package org.eclipse.papyrus.activitysimulation.mokaconnector.engine;
 
 import org.eclipse.papyrus.activitysimulation.mokaconnector.factory.OpaqueActionFactory;
 import org.eclipse.papyrus.moka.composites.CompositeStructuresExecutionEngine;
-import org.eclipse.papyrus.moka.composites.Semantics.CommonBehaviors.Communications.CS_DispatchOperationOfInterfaceStrategy;
-import org.eclipse.papyrus.moka.composites.Semantics.CommonBehaviors.Communications.CS_NameBased_StructuralFeatureOfInterfaceAccessStrategy;
-import org.eclipse.papyrus.moka.composites.Semantics.CompositeStructures.InvocationActions.CS_DefaultConstructStrategy;
-import org.eclipse.papyrus.moka.composites.Semantics.CompositeStructures.InvocationActions.CS_DefaultRequestPropagationStrategy;
-import org.eclipse.papyrus.moka.composites.Semantics.Loci.LociL3.CS_ExecutionFactory;
 import org.eclipse.papyrus.moka.composites.Semantics.Loci.LociL3.CS_Executor;
 import org.eclipse.papyrus.moka.composites.Semantics.Loci.LociL3.CS_Locus;
-import org.eclipse.papyrus.moka.fuml.FUMLExecutionEngineForMoka;
-import org.eclipse.papyrus.moka.fuml.Semantics.Loci.LociL1.Locus;
 import org.eclipse.uml2.uml.Behavior;
-import org.eclipse.uml2.uml.OpaqueAction;
 
 public class ExtendedExecutionEngine extends CompositeStructuresExecutionEngine {
 
