@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.papyrus.activitysimulation.xcos.console.ConsoleDisplayMgr;
+import org.eclipse.papyrus.moka.fuml.Semantics.Classes.Kernel.Value;
 import org.scilab.modules.javasci.JavasciException;
 import org.scilab.modules.javasci.Scilab;
+import org.scilab.modules.types.ScilabDouble;
+import org.scilab.modules.types.ScilabInteger;
 import org.scilab.modules.types.ScilabType;
 
 public class XCosEngine {
@@ -33,19 +36,34 @@ public class XCosEngine {
 		return instance;
 	}
 
-	public ArrayList<String> executeCommand(String command, ArrayList<String> observableParameters){
+
+	/**
+	 * @param command
+	 * @param observableParameters 
+	 * continuous/discrete variable or input/output
+	 * @return
+	 */
+	public ArrayList<Object> executeCommand(String command, ArrayList<String> observableParameters){
 		
 		
 		
-		ArrayList<String> results = new ArrayList<String>();
+		ArrayList<Object> results = new ArrayList<Object>();
 		
 		//ConsoleDisplayMgr.getInstance().println("Launching command - ", ConsoleDisplayMgr.MSG_INFORMATION);
 		sci.exec(command);
 		
 		for(int i = 0; i < observableParameters.size(); i++){
-		
+		//FIXME see documentation to avoid strings
 			try {
-				results.add(sci.get(observableParameters.get(i)).toString());
+				ScilabType scilabType = sci.get(observableParameters.get(i));
+				if(scilabType instanceof ScilabInteger){
+					results.add(Integer.parseInt(scilabType.toString()));	
+				} else if(sci.get(observableParameters.get(i)) instanceof ScilabDouble){
+					ScilabDouble sd = (ScilabDouble) sci.get(observableParameters.get(i));
+					double[][] realPart = sd.getRealPart();
+					double d = realPart[0][0];
+					results.add(d);
+				}
 			} catch (JavasciException e) {
 				e.printStackTrace();
 			}

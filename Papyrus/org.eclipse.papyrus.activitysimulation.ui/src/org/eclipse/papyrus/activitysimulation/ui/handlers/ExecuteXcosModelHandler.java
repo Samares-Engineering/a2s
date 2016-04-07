@@ -45,6 +45,7 @@ public class ExecuteXcosModelHandler implements IHandler {
 		//get selected activity
 		//get model element associated to the activity
 		//get parameters
+		//verify parameters/nb of parameters
 		//create the command to load the model into scilab
 		//create the command to launch the simulation of the model with the parameters
 		//the current selection in the entire page
@@ -65,10 +66,10 @@ public class ExecuteXcosModelHandler implements IHandler {
 			ArrayList<String> observableParameters = new ArrayList<String>();
 
 			observableParameters.add("result");
-			ArrayList<String> results = XCosEngine.getInstance().executeCommand(command, observableParameters);
+			ArrayList<Object> results = XCosEngine.getInstance().executeCommand(command, observableParameters);
 
 			for(int i = 0; i < results.size(); i++){
-				ConsoleDisplayMgr.getInstance().println(observableParameters.get(i) + " = " + results.get(i), ConsoleDisplayMgr.MSG_INFORMATION);
+				ConsoleDisplayMgr.getInstance().println(observableParameters.get(i) + " = " + results.get(i).toString(), ConsoleDisplayMgr.MSG_INFORMATION);
 			}
 
 			ConsoleDisplayMgr.getInstance().println("End Scilab execution.", ConsoleDisplayMgr.MSG_INFORMATION);

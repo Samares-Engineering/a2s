@@ -12,7 +12,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.swt,
  org.eclipse.uml2.uml,
  org.eclipse.core.resources,
- org.junit
+ org.junit,
+ org.eclipse.papyrus.moka.fuml;bundle-version="1.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: lib/jgraphx.jar,

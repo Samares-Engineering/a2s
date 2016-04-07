@@ -1,6 +1,5 @@
 package org.eclipse.papyrus.activitysimulation.mokaconnector.factory;
 
-import org.eclipse.papyrus.moka.composites.Semantics.Actions.CompleteActions.CS_ReadExtentActionActivation;
 import org.eclipse.papyrus.moka.composites.Semantics.Loci.LociL3.CS_ExecutionFactory;
 import org.eclipse.papyrus.moka.fuml.Semantics.Loci.LociL1.SemanticVisitor;
 import org.eclipse.uml2.uml.Element;
