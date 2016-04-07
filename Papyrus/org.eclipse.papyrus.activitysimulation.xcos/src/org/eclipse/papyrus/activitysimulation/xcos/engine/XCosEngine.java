@@ -5,16 +5,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.papyrus.activitysimulation.xcos.console.ConsoleDisplayMgr;
-import org.eclipse.papyrus.moka.fuml.Semantics.Classes.Kernel.Value;
 import org.scilab.modules.javasci.JavasciException;
 import org.scilab.modules.javasci.Scilab;
 import org.scilab.modules.types.ScilabDouble;
 import org.scilab.modules.types.ScilabInteger;
 import org.scilab.modules.types.ScilabType;
-
+//import org.scilab.modules.xcos.Xcos;
+import org.scilab.modules.xcos.graph.XcosDiagram;
 public class XCosEngine {
 
 	private Scilab sci;
+	//private Xcos xcos;
+	//private XcosDiagram xcosDiagram;
 	private static XCosEngine instance;
 
 	private XCosEngine(){
@@ -22,6 +24,9 @@ public class XCosEngine {
 			//ConsoleDisplayMgr.getInstance().clear();
 			this.sci = new Scilab();
 			sci.open();
+			//xcosDiagram = new XcosDiagram();
+			//xcosDiagram.installListeners();
+			//xcos.op
 			//ConsoleDisplayMgr.getInstance().println("Scilab started.", ConsoleDisplayMgr.MSG_INFORMATION);
 		} catch (JavasciException e) {
 			// TODO Auto-generated catch block
@@ -48,9 +53,10 @@ public class XCosEngine {
 		
 		
 		ArrayList<Object> results = new ArrayList<Object>();
-		
+		System.out.println(command);
 		//ConsoleDisplayMgr.getInstance().println("Launching command - ", ConsoleDisplayMgr.MSG_INFORMATION);
-		sci.exec(command);
+		System.out.println(sci.exec(command));
+		System.out.println(sci.getLastErrorMessage());
 		
 		for(int i = 0; i < observableParameters.size(); i++){
 		//FIXME see documentation to avoid strings
@@ -78,6 +84,15 @@ public class XCosEngine {
 		
 		//sci.close();
 		
+	}
+	
+	public void getContext(){
+		sci.exec("context = scs_m.props.context;");
+		sci.exec("context");
+	}
+	
+	public void changeContext(String parameterName, Object value){
+		sci.exec("Context." + parameterName + " = " + value.toString()+";");
 	}
 	
 	public void openScilabXCos(String diagram_path){
