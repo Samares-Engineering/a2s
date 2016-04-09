@@ -81,7 +81,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu">
          <command
-               commandId="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
+               commandId="org.eclipse.papyrus.activitysimulation.ui.importxcosmodelcommand"
                icon="icon/import.gif"
                id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu.importxcosmodelcommand"
                label="Import XCos model"
@@ -95,7 +95,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu">
          <command
-               commandId="org.samares.activity2simulink.papyrus.ui.executexcosmodelcommand"
+               commandId="org.eclipse.papyrus.activitysimulation.ui.executexcosmodelcommand"
                icon="icon/logo_execute_small_icon.gif"
                id="org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu.executexcosmodelcommand"
                label="Execute "
@@ -109,7 +109,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.papyrus.views.modelexplorer.popup.reusemenu.xcosmenu">
          <command
-               commandId="org.samares.activity2simulink.papyrus.ui.openscilabenvcommand"
+               commandId="org.eclipse.papyrus.activitysimulation.ui.openscilabenvcommand"
                icon="icon/logo_scilab_small_icon.png"
                label="Open in Scilab"
                style="push">
@@ -155,7 +155,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu">
          <command
-               commandId="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
+               commandId="org.eclipse.papyrus.activitysimulation.ui.importxcosmodelcommand"
                icon="icon/import.gif"
                id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu.importxcosmodelcommand"
                label="Import XCos model"
@@ -183,7 +183,7 @@
             allPopups="true"
             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu">
          <command
-               commandId="org.samares.activity2simulink.papyrus.ui.executexcosmodelcommand"
+               commandId="org.eclipse.papyrus.activitysimulation.ui.executexcosmodelcommand"
                icon="icon/logo_execute_small_icon.gif"
                id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu.executexcosmodelcommand"
                label="Execute"
@@ -191,6 +191,17 @@
             <visibleWhen
                   checkEnabled="true">
             </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu">
+         <command
+               commandId="org.eclipse.papyrus.activitysimulation.ui.setparameterscommand"
+               icon="icon/write_obj.gif"
+               id="org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu.reusemenu.xcosmenu.setparameterscommand"
+               label="Set parameters"
+               style="push">
          </command>
       </menuContribution>
    </extension>
@@ -203,18 +214,23 @@
       </command>-->
       <command
             defaultHandler="org.eclipse.papyrus.activitysimulation.ui.handlers.ImportXcosModelHandler"
-            id="org.samares.activity2simulink.papyrus.ui.importxcosmodelcommand"
+            id="org.eclipse.papyrus.activitysimulation.ui.importxcosmodelcommand"
             name="ImportXcosModel">
       </command>
       <command
             defaultHandler="org.eclipse.papyrus.activitysimulation.ui.handlers.ExecuteXcosModelHandler"
-            id="org.samares.activity2simulink.papyrus.ui.executexcosmodelcommand"
+            id="org.eclipse.papyrus.activitysimulation.ui.executexcosmodelcommand"
             name="ExecuteXcosModel">
       </command>
       <command
             defaultHandler="org.eclipse.papyrus.activitysimulation.ui.handlers.OpenScilabEnvironmentHandler"
-            id="org.samares.activity2simulink.papyrus.ui.openscilabenvcommand"
+            id="org.eclipse.papyrus.activitysimulation.ui.openscilabenvcommand"
             name="OpenScilabEnv">
+      </command>
+      <command
+            defaultHandler="org.eclipse.papyrus.activitysimulation.ui.handlers.SetParametersHandler"
+            id="org.eclipse.papyrus.activitysimulation.ui.setparameterscommand"
+            name="SetParameters">
       </command>
    </extension>
    <extension

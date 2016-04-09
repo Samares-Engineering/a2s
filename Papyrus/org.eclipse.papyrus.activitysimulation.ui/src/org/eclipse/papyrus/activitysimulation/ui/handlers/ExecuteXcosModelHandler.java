@@ -1,9 +1,6 @@
 package org.eclipse.papyrus.activitysimulation.ui.handlers;
 
 import java.util.ArrayList;
-
-import javax.swing.JViewport;
-
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
@@ -15,16 +12,10 @@ import org.eclipse.papyrus.activitysimulation.xcos.console.ConsoleDisplayMgr;
 import org.eclipse.papyrus.activitysimulation.xcos.engine.XCosEngine;
 import org.eclipse.papyrus.emf.facet.custom.metamodel.v0_2_0.internal.treeproxy.impl.EObjectTreeElementImpl;
 import org.eclipse.papyrus.uml.diagram.activity.edit.part.CustomOpaqueActionEditPart;
-import org.eclipse.ui.IPageLayout;
-import org.eclipse.ui.ISelectionListener;
-import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.uml2.uml.OpaqueAction;
-import org.eclipse.uml2.uml.internal.impl.ActivityImpl;
-import org.eclipse.uml2.uml.internal.impl.OpaqueActionImpl;
 
 public class ExecuteXcosModelHandler implements IHandler {
 
@@ -58,21 +49,24 @@ public class ExecuteXcosModelHandler implements IHandler {
 		OpaqueAction opaqueAction = this.getOpaqueActionFromMouseSelection(selection);
 
 		if(opaqueAction != null){
-			String command = opaqueAction.getBodies().get(0).toString();
-			ConsoleDisplayMgr.getInstance().clear();
-			ConsoleDisplayMgr.getInstance().println("Launching Scilab with command " + command, ConsoleDisplayMgr.MSG_INFORMATION);
+			if(opaqueAction.getLanguages().contains("Scilab")){
 
-			//To replace by Papyrus node
-			ArrayList<String> observableParameters = new ArrayList<String>();
+				String command = opaqueAction.getBodies().get(opaqueAction.getLanguages().indexOf("Scilab"));
+				ConsoleDisplayMgr.getInstance().clear();
+				ConsoleDisplayMgr.getInstance().println("Launching Scilab with command " + command, ConsoleDisplayMgr.MSG_INFORMATION);
 
-			observableParameters.add("result");
-			ArrayList<Object> results = XCosEngine.getInstance().executeCommand(command, observableParameters);
+				//To replace by Papyrus node
+				ArrayList<String> observableParameters = new ArrayList<String>();
 
-			for(int i = 0; i < results.size(); i++){
-				ConsoleDisplayMgr.getInstance().println(observableParameters.get(i) + " = " + results.get(i).toString(), ConsoleDisplayMgr.MSG_INFORMATION);
+				observableParameters.add("result");
+				ArrayList<Object> results = XCosEngine.getInstance().executeCommand(command, observableParameters);
+
+				for(int i = 0; i < results.size(); i++){
+					ConsoleDisplayMgr.getInstance().println(observableParameters.get(i) + " = " + results.get(i).toString(), ConsoleDisplayMgr.MSG_INFORMATION);
+				}
+
+				ConsoleDisplayMgr.getInstance().println("End Scilab execution.", ConsoleDisplayMgr.MSG_INFORMATION);
 			}
-
-			ConsoleDisplayMgr.getInstance().println("End Scilab execution.", ConsoleDisplayMgr.MSG_INFORMATION);
 		}
 		return null;
 	}

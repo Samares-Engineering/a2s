@@ -49,15 +49,12 @@ public class XCosEngine {
 	 * @return
 	 */
 	public ArrayList<Object> executeCommand(String command, ArrayList<String> observableParameters){
-		
-		
-		
+	
 		ArrayList<Object> results = new ArrayList<Object>();
-		System.out.println(command);
-		//ConsoleDisplayMgr.getInstance().println("Launching command - ", ConsoleDisplayMgr.MSG_INFORMATION);
-		System.out.println(sci.exec(command));
-		System.out.println(sci.getLastErrorMessage());
 		
+		sci.exec(command);
+		
+		//ConsoleDisplayMgr.getInstance().println("Launching command - ", ConsoleDisplayMgr.MSG_INFORMATION);
 		for(int i = 0; i < observableParameters.size(); i++){
 		//FIXME see documentation to avoid strings
 			try {
@@ -69,6 +66,7 @@ public class XCosEngine {
 					double[][] realPart = sd.getRealPart();
 					double d = realPart[0][0];
 					results.add(d);
+					///System.out.println("Results : " + d);
 				}
 			} catch (JavasciException e) {
 				e.printStackTrace();

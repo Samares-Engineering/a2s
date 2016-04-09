@@ -27,14 +27,12 @@ public class OpaqueActionActivation extends ActionActivation {
 			
 			String command = opaqueAction.getBodies().get(opaqueAction.getLanguages().indexOf("Scilab"));
 			List<OutputPin> resultPins = opaqueAction.getOutputs();
-			//System.out.println(this.getTokens(opaqueAction.getInputs().get(0)).get(0).toString());
-			
+		
 			//FIXME for multiple inputs
 			List<Value> inputValues = this.getTokens(opaqueAction.getInputs().get(0));
-			System.out.println(inputValues.toString());
+			//System.out.println(inputValues.toString());
 			
 			//FIXME for multiple inputs
-			//replace input variables (in the command) by the real value evaluated by moka.
 			command = this.replaceInputValues(command, opaqueAction.getInputs().get(0).getName(), inputValues.get(0));
 		
 			ArrayList<String> observableParameters = new ArrayList<String>();
@@ -42,11 +40,7 @@ public class OpaqueActionActivation extends ActionActivation {
 				observableParameters.add(resultPins.get(i).getName());
 			}
 			ArrayList<Object> results= XCosEngine.getInstance().executeCommand(command, observableParameters);
-			
-			/*for(int i = 0; i < results.size(); i++){
-				//ConsoleDisplayMgr.getInstance().println(observableParameters.get(i) + " = " + results.get(i), ConsoleDisplayMgr.MSG_INFORMATION);
-			}*/
-			
+						
 			for (int i = 0; i < results.size(); i++) {
 				
 				Value value = null;
@@ -56,14 +50,11 @@ public class OpaqueActionActivation extends ActionActivation {
 					((RealValue) value).value = (double) results.get(i); 
 					((RealValue) value).type = (PrimitiveType) this.getExecutionLocus().factory.getBuiltInType("Real"); 
 				}
-				
+
+				//Voir troncation real Moka
 				this.putToken(opaqueAction.getOutputs().get(i), value);
 			}
 			
-			//Value value =  this.getExecutionLocus().executor.evaluate(XCosEngine.getInstance().execute(opaqueAction.getBodies().get(0))); 
-					
-			//this.putToken(resultPins.get(0), value);
-			System.out.println("###############"  + results.toString());
 		}
 	}
 
