@@ -2,7 +2,6 @@ package org.eclipse.papyrus.activitysimulation.xcos.engine;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.eclipse.papyrus.activitysimulation.xcos.console.ConsoleDisplayMgr;
 import org.scilab.modules.javasci.JavasciException;
@@ -11,7 +10,8 @@ import org.scilab.modules.types.ScilabDouble;
 import org.scilab.modules.types.ScilabInteger;
 import org.scilab.modules.types.ScilabType;
 //import org.scilab.modules.xcos.Xcos;
-import org.scilab.modules.xcos.graph.XcosDiagram;
+//import org.scilab.modules.xcos.graph.XcosDiagram;
+
 public class XCosEngine {
 
 	private Scilab sci;
@@ -61,8 +61,8 @@ public class XCosEngine {
 				ScilabType scilabType = sci.get(observableParameters.get(i));
 				if(scilabType instanceof ScilabInteger){
 					results.add(Integer.parseInt(scilabType.toString()));	
-				} else if(sci.get(observableParameters.get(i)) instanceof ScilabDouble){
-					ScilabDouble sd = (ScilabDouble) sci.get(observableParameters.get(i));
+				} else if(scilabType instanceof ScilabDouble){
+					ScilabDouble sd = (ScilabDouble) scilabType;
 					double[][] realPart = sd.getRealPart();
 					double d = realPart[0][0];
 					results.add(d);
@@ -82,6 +82,10 @@ public class XCosEngine {
 		
 		//sci.close();
 		
+	}
+
+	public void sciClose(){
+		this.sci.close();
 	}
 	
 	public void getContext(){
@@ -105,5 +109,21 @@ public class XCosEngine {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public double executeCommand(String command) {
+		sci.exec(command);
+		try {
+			ScilabType scilabType = sci.get("result");
+			if(scilabType instanceof ScilabDouble){
+				ScilabDouble sd = (ScilabDouble) scilabType;
+				double[][] realPart = sd.getRealPart();
+				return(realPart[0][0]);
+			}
+		} catch (JavasciException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return -1;
 	}
 }

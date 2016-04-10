@@ -8,5 +8,16 @@
             description="Extended Execution Engine for Moka">
       </engine>
    </extension>
+   <extension
+         point="org.eclipse.papyrus.moka.fuml.library">
+      <library
+            class="org.eclipse.papyrus.activitysimulation.mokaconnector.continuouslibrary.ContinuousLibraryRegistry">
+      </library>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.moka.fuml.services">
+      <services
+            class="org.eclipse.papyrus.activitysimulation.mokaconnector.continuouslibrary.ContinuousServicesRegistry"></services>
+   </extension>
 
 </plugin>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:configuration="http://www.eclipse.org/papyrus/infra/viewpoints/configuration" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_smXvoP8REeWrouSo3YLl0w" type="PapyrusUMLClassDiagram" name="Package Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_RqlMsP8TEeWrouSo3YLl0w" type="Package_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_RqvkwP8TEeWrouSo3YLl0w" type="Package_NameLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_RqxZ8P8TEeWrouSo3YLl0w" type="Package_PackagedElementCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_RqxZ8f8TEeWrouSo3YLl0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RqxZ8v8TEeWrouSo3YLl0w"/>
+    </children>
+    <element xmi:type="uml:Package" href="Continuous_Library.uml#_83Ng4P8REeWrouSo3YLl0w"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RqlzwP8TEeWrouSo3YLl0w" x="326" y="184"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_R-u3wP8TEeWrouSo3YLl0w" type="Package_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_R-wF4P8TEeWrouSo3YLl0w" type="Package_NameLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_R-wF4f8TEeWrouSo3YLl0w" type="Package_PackagedElementCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_R-wF4v8TEeWrouSo3YLl0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-wF4_8TEeWrouSo3YLl0w"/>
+    </children>
+    <element xmi:type="uml:Package" href="Continuous_Library.uml#_6sMlYP8SEeWrouSo3YLl0w"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R-u3wf8TEeWrouSo3YLl0w" x="568" y="185"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_smXvof8REeWrouSo3YLl0w" name="diagram_compatibility_version" stringValue="1.2.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_smXvov8REeWrouSo3YLl0w"/>
+  <styles xmi:type="style:PapyrusViewStyle" xmi:id="_smXvo_8REeWrouSo3YLl0w">
+    <owner xmi:type="uml:Model" href="Continuous_Library.uml#_skA_MP8REeWrouSo3YLl0w"/>
+    <configuration xmi:type="configuration:PapyrusDiagram" href="platform:/plugin/org.eclipse.papyrus.uml.diagram.clazz/model/clazzdiagram.configuration#_zzf4cXDtEeWh-MssWmCB_A"/>
+  </styles>
+  <element xmi:type="uml:Model" href="Continuous_Library.uml#_skA_MP8REeWrouSo3YLl0w"/>
+</notation:Diagram>
