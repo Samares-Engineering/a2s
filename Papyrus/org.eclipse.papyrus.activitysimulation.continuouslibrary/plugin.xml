@@ -5,7 +5,8 @@
          point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
       <library
             description="Continuous library for systems engineering"
-            name="ContinuousLibrary"
+            iconpath="icons/logo_continuous_small_icon.png"
+            name="Continuous Library"
             path="pathmap://PAPYRUS_CONTINUOUS_LIBRARY/continuous.library.uml"
             provider="Samares-Engineering">
       </library>

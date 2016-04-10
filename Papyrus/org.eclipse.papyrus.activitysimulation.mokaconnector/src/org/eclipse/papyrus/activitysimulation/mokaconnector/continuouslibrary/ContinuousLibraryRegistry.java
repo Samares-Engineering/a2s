@@ -20,7 +20,7 @@ import org.eclipse.papyrus.moka.fuml.registry.AbstractOpaqueBehaviorExecutionReg
 
 public class ContinuousLibraryRegistry extends AbstractOpaqueBehaviorExecutionRegistry {
 
-	protected final static String CONTINUOUS_LIBRARY_NAME = "ContinuousLibrary";
+	protected final static String CONTINUOUS_LIBRARY_NAME = "Continuous Library";
 
 	@Override
 	public void registerOpaqueBehaviorExecutions(Locus locus) {

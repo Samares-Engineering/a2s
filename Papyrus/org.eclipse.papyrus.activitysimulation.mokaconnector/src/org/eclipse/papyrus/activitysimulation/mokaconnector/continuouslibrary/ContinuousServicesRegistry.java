@@ -10,7 +10,7 @@ import org.eclipse.uml2.uml.Class;
 
 public class ContinuousServicesRegistry extends AbstractSystemServicesRegistry {
 
-	protected final static String CONTINUOUS_LIBRARY_NAME = "ContinuousLibrary";
+	protected final static String CONTINUOUS_LIBRARY_NAME = "Continuous Library";
 
 	protected final static String STANDARD_INPUT_CHANNEL_SERVICE_NAME = "FoundationalModelLibrary::BasicInputOutput::StandardInputChannel";
 

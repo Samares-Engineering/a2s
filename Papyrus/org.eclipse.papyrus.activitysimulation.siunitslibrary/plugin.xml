@@ -5,7 +5,8 @@
          point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
       <library
             description="International System of Units for MBSE"
-            name="SILibrary"
+            iconpath="icons/logo_si_small_icon.png"
+            name="SI Units Library"
             path="pathmap://PAPYRUS_SI_LIBRARY/si.library.uml"
             provider="Samares-Engineering">
       </library>
