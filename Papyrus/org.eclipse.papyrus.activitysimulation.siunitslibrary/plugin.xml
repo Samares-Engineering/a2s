@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
+      <library
+            description="International System of Units for MBSE"
+            name="SILibrary"
+            path="pathmap://PAPYRUS_SI_LIBRARY/si.library.uml"
+            provider="Samares-Engineering">
+      </library>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://PAPYRUS_SI_LIBRARY/"
+            target="platform:/plugin/org.eclipse.papyrus.activitysimulation.siunitslibrary/resources/">
+      </mapping>
+   </extension>
+
+</plugin>

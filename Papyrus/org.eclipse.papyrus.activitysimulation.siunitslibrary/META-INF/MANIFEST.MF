@@ -1,10 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Siunitslibrary
-Bundle-SymbolicName: org.eclipse.papyrus.activitysimulation.siunitslibrary
+Bundle-SymbolicName: org.eclipse.papyrus.activitysimulation.siunitslibrary;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipse.papyrus.activitysimulation.siunitslibrary.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.papyrus.uml.extensionpoints;bundle-version="1.2.0",
+ org.eclipse.emf;bundle-version="2.6.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
