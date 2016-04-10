@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_skA_MP8REeWrouSo3YLl0w" name="ContinuousLibrary">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ssOgAP8REeWrouSo3YLl0w">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_83Ng4P8REeWrouSo3YLl0w" name="MathFunctions">
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_1WFEMP8xEeWrouSo3YLl0w" name="ACos" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WFEMf8xEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WFEMv8xEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_xePP8P8xEeWrouSo3YLl0w" name="ASin" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xePP8f8xEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xePP8v8xEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_6OlEMP8xEeWrouSo3YLl0w" name="ATan" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6OlEMf8xEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6OlEMv8xEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_C9MaIP8yEeWrouSo3YLl0w" name="Cos" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_C9MaIf8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_C9MaIv8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_FDQHsP8yEeWrouSo3YLl0w" name="Cosh" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FDQHsf8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FDQHsv8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_GsFtwP8yEeWrouSo3YLl0w" name="Exp" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GsFtwf8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GsFtwv8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_PS_5MP8yEeWrouSo3YLl0w" name="Log" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PS_5Mf8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_PS_5Mv8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_TXY7sP8yEeWrouSo3YLl0w" name="Log10" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TXY7sf8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TXY7sv8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_X5mioP8yEeWrouSo3YLl0w" name="Power" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_X5miof8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_azaoYP8yEeWrouSo3YLl0w" name="y">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_X5miov8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_oSdN8P8SEeWrouSo3YLl0w" name="Sin" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CpJ04P8TEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ixmYAP8TEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_kYBLIP8yEeWrouSo3YLl0w" name="Sinh" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYByMP8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYByMf8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_qnflIP8yEeWrouSo3YLl0w" name="Sqrt" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qnflIf8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qnflIv8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_ln5eoP8yEeWrouSo3YLl0w" name="Tan" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ln5eof8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ln5eov8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_r7kcIP8yEeWrouSo3YLl0w" name="Tanh" isAbstract="true" isReentrant="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_r7kcIf8yEeWrouSo3YLl0w" name="x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_r7kcIv8yEeWrouSo3YLl0w" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6sMlYP8SEeWrouSo3YLl0w" name="ContinuousFunctions">
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_84gE4P8SEeWrouSo3YLl0w" name="Der" isAbstract="true" isReentrant="false"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zWafQP9BEeWrouSo3YLl0w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zWbGUP9BEeWrouSo3YLl0w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:ModelLibrary xmi:id="_z6QMIP9BEeWrouSo3YLl0w" base_Package="_skA_MP8REeWrouSo3YLl0w"/>
+  <standard:ModelLibrary xmi:id="_0rUcsP9BEeWrouSo3YLl0w" base_Package="_83Ng4P8REeWrouSo3YLl0w"/>
+  <standard:ModelLibrary xmi:id="_1k8MUP9BEeWrouSo3YLl0w" base_Package="_6sMlYP8SEeWrouSo3YLl0w"/>
+</xmi:XMI>
