@@ -1,21 +1,24 @@
+/*******************************************************************************
+ * Copyright (c) 2016 Samares-Engineering.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Jean-Marie Gauthier - initial API and implementation
+ *******************************************************************************/
 package org.eclipse.papyrus.activitysimulation.mokaconnector.factory;
 
 import org.eclipse.papyrus.moka.fuml.Semantics.Actions.BasicActions.ActionActivation;
-import org.eclipse.papyrus.moka.fuml.Semantics.Classes.Kernel.Object_;
 import org.eclipse.papyrus.moka.fuml.Semantics.Classes.Kernel.RealValue;
 import org.eclipse.papyrus.moka.fuml.Semantics.Classes.Kernel.Value;
-import org.eclipse.uml2.uml.Classifier;
-import org.eclipse.uml2.uml.InputPin;
 import org.eclipse.uml2.uml.OpaqueAction;
 import org.eclipse.uml2.uml.OutputPin;
 import org.eclipse.uml2.uml.PrimitiveType;
-import org.eclipse.uml2.uml.ValueSpecification;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-import org.eclipse.papyrus.activitysimulation.xcos.console.ConsoleDisplayMgr;
 import org.eclipse.papyrus.activitysimulation.xcos.engine.XCosEngine;
 
 public class OpaqueActionActivation extends ActionActivation {
