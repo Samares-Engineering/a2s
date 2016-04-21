@@ -32,21 +32,30 @@ public class XCosEngineTest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	/*@Test
 	public void testExecute_Sum_Command() {
 		
 		String command = "result = 3 + 1;";	
 		ArrayList<String> outVars = new ArrayList<String>();
 		outVars.add("result");
 		assertEquals("[[4.0]]", XCosEngine.getInstance().executeCommand(command, outVars).toString());
-	}
+	}*/
 
-	/*@Test
+	@Test
 	public void testExecute_Model_Command() {
 		String diagram_path = "test/org/samares/activity2simulink/papyrus/xcoscore/test/ressources/pid_feedback.zcos";
-		String command = "importXcosDiagram(\"" + diagram_path + "\")";	
-		System.out.println(XCosEngine.getInstance().execute(command));
-	}*/
+		String command = "loadXcosLibs();"; 	
+		//ArrayList<Object> resultXCos = executeCommand(command);
+		XCosEngine.getInstance().execute(command);
+		
+		command = "status = importXcosDiagram(\"" + diagram_path + "\");"; 	
+		//ArrayList<Object> resultXCos = executeCommand(command);
+		XCosEngine.getInstance().execute(command);
+		
+		command = "xcos_simulate(scs_m, 4);"; 	
+		//ArrayList<Object> resultXCos = executeCommand(command);
+		XCosEngine.getInstance().execute(command);
+	}
 	
 	/*@Test
 	public void openScilabXCosTest(){

@@ -66,7 +66,6 @@ public class XCosEngine {
 		
 		//ConsoleDisplayMgr.getInstance().println("Launching command - ", ConsoleDisplayMgr.MSG_INFORMATION);
 		for(int i = 0; i < observableParameters.size(); i++){
-		//FIXME see documentation to avoid strings
 			try {
 				ScilabType scilabType = sci.get(observableParameters.get(i));
 				if(scilabType instanceof ScilabInteger){
@@ -87,11 +86,6 @@ public class XCosEngine {
 		//ConsoleDisplayMgr.getInstance().println("End Scilab execution.", ConsoleDisplayMgr.MSG_INFORMATION);
 	
 		return results;
-		//result = sci.getLastErrorMessage();
-		
-		
-		//sci.close();
-		
 	}
 
 	public void sciClose(){
@@ -135,5 +129,11 @@ public class XCosEngine {
 			e.printStackTrace();
 		}
 		return -1;
+	}
+	
+	public void execute(String command){
+		sci.exec(command);
+		System.out.println(sci.getLastErrorMessage());
+		this.getContext();
 	}
 }
