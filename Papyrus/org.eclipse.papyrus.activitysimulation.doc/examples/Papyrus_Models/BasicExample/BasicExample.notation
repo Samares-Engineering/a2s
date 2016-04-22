@@ -513,7 +513,7 @@
     <styles xmi:type="notation:DiagramStyle" xmi:id="_q9518vjPEeWHcOH6E1R-qQ"/>
     <element xmi:type="uml:CallOperationAction" href="BasicExample.uml#_nAHxwPjPEeWHcOH6E1R-qQ"/>
   </notation:Diagram>
-  <notation:Diagram xmi:id="_eKAQMPjQEeWLdqvoaUW3jw" type="PapyrusUMLActivityDiagram" name="AccelerateFunction" measurementUnit="Pixel">
+  <notation:Diagram xmi:id="_eKAQMPjQEeWLdqvoaUW3jw" type="PapyrusUMLActivityDiagram" name="ExampleFunction" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_eKAQMfjQEeWLdqvoaUW3jw" type="Activity_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_eKAQMvjQEeWLdqvoaUW3jw" type="Activity_NameLabel"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_eKAQNPjQEeWLdqvoaUW3jw" type="Activity_ParameterCompartment">
